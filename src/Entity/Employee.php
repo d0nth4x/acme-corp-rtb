@@ -141,12 +141,12 @@ class Employee
         return $this;
     }
 
-    public function getTreeParent(): Employee
+    public function getTreeParent(): ?Employee
     {
         return $this->treeParent;
     }
 
-    public function setTreeParent(Employee $treeParent): self
+    public function setTreeParent(?Employee $treeParent): self
     {
         $this->treeParent = $treeParent;
 

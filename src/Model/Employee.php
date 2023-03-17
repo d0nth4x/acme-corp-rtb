@@ -15,7 +15,6 @@ class Employee
     #[Assert\NotBlank]
     private int $jobTitleId;
 
-    #[Assert\NotBlank]
     private ?int $parentId = null;
 
     public function getName(): string
@@ -48,13 +47,12 @@ class Employee
         $this->jobTitleId = $jobTitleId;
     }
 
-
     public function getParentId(): ?int
     {
         return $this->parentId;
     }
 
-    public function setParentId(?int $parentId)
+    public function setParentId(?int $parentId): void
     {
         $this->parentId = $parentId;
     }
